@@ -372,6 +372,19 @@
 				</ul>
 			</div>
 		</section>
+		<footer class="forward__page-footer">
+			<div class="wrap">
+				<div class="copy">
+					© Информационные системы 2009-2020
+				</div>
+				<div class="links">
+					<a href="mailto:info@1ats.ru">info@1ats.ru</a>
+					<a href="/oferta_vats.pdf">Публичная оферта</a>
+					<a href="/pd_vats.pdf">Правила обработки перс.данных</a>
+				</div>
+				<a href="tel:74951034444" class="phone">+7 495 103-44-44</a>
+			</div>
+		</footer>
 	</main>
 	<!--  -->
 	<div class="base-popup select-number_popup" data-popup="select-number_popup">
@@ -604,7 +617,7 @@
 				</div>
 				<div class="input">
 					<div class="input-block">
-						<input type="text" id="input_1" name="input_1" placeholder="Ваш мобильный">
+						<input type="text" id="bnp-input_1" name="input_1" placeholder="Ваш мобильный">
 					</div>
 				</div>
 				<div class="base-popup__footer">
@@ -647,6 +660,18 @@
 					<button class="btn base-btn grey popup-btn__close" data-popup="book-number_popup">Отмена</button>
 				</div>
 			</div>
+			<div class="content step-empty">
+				<div class="base-popup__title">
+					Забронировать номер и протестировать
+				</div>
+				<div class="content-info">
+					<p>Для того чтобы забронировать номер необходимо указать мобильный телефон для переадресации.</p>
+					<p>Если вам необходим городской номер без переадресации на мобильный свяжитесь с нами по номеру +7(495)103-44-44</p>
+				</div>
+				<div class="base-popup__footer">
+					<button class="btn base-btn grey popup-btn__close" data-popup="book-number_popup">Закрыть</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!--  -->
@@ -665,7 +690,11 @@
 	};
 	// 
 	document.querySelector('.submit-book-number').onclick = function() { 
-		document.querySelector('.book-number_popup').classList.add('confirmation');
+		if (document.querySelector('#bnp-input_1').value.length == 0) {
+			document.querySelector('.book-number_popup').classList.add('empty-num');
+		}else{
+			document.querySelector('.book-number_popup').classList.add('confirmation');
+		}
 	};
 	document.querySelector('.change-booked-num').onclick = function() { 
 		document.querySelector('.book-number_popup').classList.remove('confirmation');
@@ -697,6 +726,7 @@
 	  if($(this).attr("data-popup")){
 	    var attributeSelector = '.base-popup[data-popup="'+$(this).attr("data-popup")+'"]';
 	    $(attributeSelector).removeClass('opened');
+	    $(attributeSelector).removeClass('confirmation empty-num');
 	  }else{
 	    $('.base-popup:not([data-popup])').removeClass('opened');
 	  }
