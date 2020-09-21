@@ -49,7 +49,7 @@
             align-items: flex-end; }
     .main-header__cabinet .phone {
       font-size: 20px;
-      color: #000;
+      color: #fff;
       letter-spacing: 0.05em;
       -webkit-transition: .35s ease;
       -o-transition: .35s ease;

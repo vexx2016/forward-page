@@ -822,29 +822,54 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 40px;
-  margin-bottom: 140px; }
+  padding-bottom: 120px;
+  margin-bottom: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  overflow: hidden; }
+  .forward__page .screen-main > .wrap {
+    position: inherit; }
+  .forward__page .screen-main .main-header {
+    margin-bottom: 3vh; }
   .forward__page .screen-main .left-side {
-    width: 560px;
-    margin-right: 45px; }
-  .forward__page .screen-main .right-side .cover {
-    max-width: 670px;
-    margin-right: -105px; }
-  .forward__page .screen-main .right-side .bg {
+    text-align: center; }
+  .forward__page .screen-main .right-side {
     position: absolute;
-    right: -10%;
-    top: -5%;
+    width: 102vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 0;
+    height: 100%;
     z-index: -1; }
+    .forward__page .screen-main .right-side .cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+    .forward__page .screen-main .right-side .bg {
+      width: 570px;
+      position: absolute;
+      z-index: 1;
+      right: 2%;
+      top: 2%; }
   .forward__page .screen-main .moto {
     font-size: 48px;
     font-weight: 800;
     line-height: 55px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    color: #fff; }
   .forward__page .screen-main .title {
     font-size: 24px;
     line-height: 1.4;
     font-weight: 600;
-    margin-bottom: 15px; }
+    margin: auto;
+    margin-bottom: 15px;
+    color: #fff;
+    max-width: 550px; }
     .forward__page .screen-main .title .choose-city {
       font-size: 24px;
       line-height: 1;
@@ -908,14 +933,18 @@ body {
             .forward__page .screen-main .title .choose-city__dropdown ul li.active {
               background: #f9ecb6; }
   .forward__page .screen-main .info {
-    color: #7C7C7C;
-    font-size: 14px;
+    color: #E1E1E1;
+    font-size: 16px;
     line-height: 1.4;
-    margin-bottom: 35px; }
+    margin-bottom: 45px; }
   .forward__page .screen-main .phone-box {
     padding: 30px;
     border: solid 1px #E0E0E0;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background: #fff;
+    max-width: 550px;
+    margin: auto;
+    position: relative; }
     .forward__page .screen-main .phone-box.non-active-number .phone {
       color: rgba(255, 34, 53, 0.65); }
       .forward__page .screen-main .phone-box.non-active-number .phone span:before {
@@ -931,7 +960,8 @@ body {
     .forward__page .screen-main .phone-box.non-active-number .btn.change-number {
       display: none; }
       .forward__page .screen-main .phone-box.non-active-number .btn.change-number.renew {
-        display: block; }
+        display: block;
+        margin: 0 auto 30px; }
     .forward__page .screen-main .phone-box .label {
       font-size: 11px;
       text-transform: uppercase;
@@ -1001,9 +1031,10 @@ body {
       -webkit-transform: rotate(-2deg);
           -ms-transform: rotate(-2deg);
               transform: rotate(-2deg);
-      margin-top: 22px;
       padding-left: 8px;
-      margin-bottom: 10px; }
+      position: absolute;
+      top: 22px;
+      right: -60px; }
       .forward__page .screen-main .phone-box .promo-tag .star {
         background: #333333;
         -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -1031,7 +1062,9 @@ body {
         font-size: 12px;
         line-height: 140%;
         letter-spacing: 0.05em;
-        font-weight: normal; }
+        font-weight: normal;
+        -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.22);
+                box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.22); }
 
 .forward__page .screen-benefits {
   font-weight: 600;
@@ -1048,6 +1081,10 @@ body {
   .forward__page .screen-benefits .item {
     max-width: 170px;
     margin: 20px 0; }
+    .forward__page .screen-benefits .item .ico {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 12px; }
 
 .forward__page .screen-tariffs {
   margin-bottom: 120px; }
@@ -2056,14 +2093,6 @@ body {
 @media (max-width: 1170px) {
   .wrap {
     padding: 0 3%; }
-  .forward__page .screen-main .left-side {
-    min-width: 420px; }
-  .forward__page .screen-main .right-side .cover {
-    width: 100%;
-    margin-right: 0;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover; }
   .forward__page .screen-benefits {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2079,10 +2108,14 @@ body {
   .forward__page .screen-tariffs__block {
     width: 32%; }
   .forward__page .screen-introduction .left-side {
-    min-width: 320px;
-    margin-right: 5%; }
+    min-width: 320px; }
   .forward__page .screen-introduction .right-side {
-    width: calc(95% - 320px); } }
+    width: calc(95% - 320px); }
+  .forward__page .screen-main .title .choose-city__dropdown {
+    left: 120%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (max-width: 1050px) {
   .forward__page .screen-tariffs__prices {
@@ -2095,14 +2128,6 @@ body {
 @media (max-width: 800px) {
   .forward__page .screen-main .left-side {
     min-height: 100%; }
-  .forward__page .screen-main .right-side {
-    width: 0; }
-    .forward__page .screen-main .right-side .cover {
-      display: none; }
-    .forward__page .screen-main .right-side .bg {
-      opacity: 0.65;
-      max-height: 120vh;
-      right: -30%; }
   .forward__page .screen-main {
     margin-bottom: 80px; }
   .forward__page .screen-tariffs__benefits {
@@ -2117,7 +2142,8 @@ body {
     width: 50%;
     margin-right: 0px;
     padding: 0 10px 0 0;
-    text-align: left; } }
+    text-align: left;
+    margin: 20px 0 40px; } }
 
 @media (max-width: 700px) {
   .select-number_popup .base-tab__header .scrollbar-inner {
@@ -2143,7 +2169,14 @@ body {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin: 15px 0; } }
+    margin: 15px 0; }
+  .forward__page .screen-main .phone-box .promo-tag {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    display: inline-block; } }
 
 @media (max-width: 660px) {
   .select-number_popup .base-popup__title {
@@ -2208,7 +2241,11 @@ body {
   .forward__page .screen-main .phone-box {
     padding: 3%; }
   .forward__page .screen-benefits .item {
-    width: 100%; }
+    width: 100%;
+    border: solid 1px #eee;
+    padding: 5%;
+    border-radius: 10px;
+    margin-bottom: 0px; }
   .forward__page .screen-tariffs {
     margin-bottom: 80px; }
   .forward__page .screen-tariffs__block .payment .info-tooltip .box {
@@ -2216,8 +2253,6 @@ body {
     right: -15px; }
   .forward__page .screen-cta .screen-cta__ul li {
     width: 100%; }
-  .forward__page .screen-main .right-side {
-    display: none; }
   .book-number_popup .input .input-block input {
     font-size: 24px; }
   .book-number_popup.confirmation .content.step-two .phone-in .num,
@@ -2226,7 +2261,14 @@ body {
   .book-number_popup.confirmation .content.step-two .phone-in .free {
     display: block; }
   .book-number_popup.confirmation .content.step-two .phone-main .change-booked-num {
-    margin-top: 4px; } }
+    margin-top: 4px; }
+  .forward__page .screen-main .main-header {
+    margin-bottom: 7vh; }
+  .forward__page .screen-main .right-side .bg {
+    right: -22%;
+    top: 12%;
+    opacity: .8;
+    min-width: 450px; } }
 
 @media (max-width: 420px) {
   .select-number_popup .base-popup__container {
@@ -2236,3 +2278,8 @@ body {
     max-width: 270px; }
   .select-number_popup .select-number_popup__form .radiogroup #rd-group1 .col__3 {
     width: 100%; } }
+
+@media (max-width: 380px) {
+  .forward__page .screen-main .moto {
+    font-size: 30px;
+    line-height: 36px; } }
